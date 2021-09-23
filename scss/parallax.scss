@@ -1,0 +1,39 @@
+@import "./global";
+
+.parallax {
+    height: 100vh;
+    perspective: 8px;
+    perspective-origin: 50%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
+
+    img {
+        position: absolute;
+        width: 100%;
+        top: 0;
+    }
+
+    &__background {
+        height: auto;
+        transform: translateZ(0px) scale(1);
+    }
+
+    &__middle-one {
+        filter: drop-shadow(-10px 0 10px rgba(0, 0, 0, 0.5));
+        position: fixed;
+        transform: rotate(180deg) translateZ(2.5px) scale(0.5);
+    }
+
+    &__middle-two {
+        filter: drop-shadow(-10px 0 10px rgba(0, 0, 0, 0.5));
+        position: fixed;
+        transform: translateZ(3.5px) scale(0.5);
+        z-index: 1;
+    }
+
+    &__foreground {
+        filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 1));
+        transform: translateZ(2px) scale(0.75);
+    }
+}

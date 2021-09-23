@@ -1,0 +1,54 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.parallax {
+  height: 100vh;
+  -webkit-perspective: 8px;
+          perspective: 8px;
+  -webkit-perspective-origin: 50%;
+          perspective-origin: 50%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.parallax img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+.parallax__background {
+  height: auto;
+  -webkit-transform: translateZ(0px) scale(1);
+          transform: translateZ(0px) scale(1);
+}
+
+.parallax__middle-one {
+  -webkit-filter: drop-shadow(-10px 0 10px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(-10px 0 10px rgba(0, 0, 0, 0.5));
+  position: fixed;
+  -webkit-transform: rotate(180deg) translateZ(2.5px) scale(0.5);
+          transform: rotate(180deg) translateZ(2.5px) scale(0.5);
+}
+
+.parallax__middle-two {
+  -webkit-filter: drop-shadow(-10px 0 10px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(-10px 0 10px rgba(0, 0, 0, 0.5));
+  position: fixed;
+  -webkit-transform: translateZ(3.5px) scale(0.5);
+          transform: translateZ(3.5px) scale(0.5);
+  z-index: 1;
+}
+
+.parallax__foreground {
+  -webkit-filter: drop-shadow(10px 10px 10px black);
+          filter: drop-shadow(10px 10px 10px black);
+  -webkit-transform: translateZ(2px) scale(0.75);
+          transform: translateZ(2px) scale(0.75);
+}
+/*# sourceMappingURL=parallax.css.map */
